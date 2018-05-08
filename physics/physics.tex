@@ -226,22 +226,23 @@ Für den Sektor muss jeweils addiert werden:
 
 \lbparagraph{Parallel}
 
-[???]
+Diese Formeln basieren auf der Annahme, dass parallele Federn sich um dieselbe Distanz strecken.
 
-\begin{equation}
+\begin{gather}
     F = F_1 + F_2
-    \eqsp{}
-    k \times x = k_1 \times x + k_2 \times x
-    \eqsp{}
-    k = k_1 + k_2
-\end{equation}
+    \\
+    D \times s = D_1 \times s + D_2 \times s \qquad | \quad \times\frac{1}{s}
+    \\
+    D = D_1 + D_2
+\end{gather}
 
 \lbparagraph{Seriell}
 
-[???]
-
-\[F = F_1 = F_2\]
-\[k = \frac{1}{\frac{1}{k_1} + \frac{1}{k_2}}\]
+\begin{equation}
+    F = F_1 = F_2
+    \eqsp{}
+    k = \frac{1}{\frac{1}{k_1} + \frac{1}{k_2}} = \frac{k_1 \times k_2}{k_1 + k_2}
+\end{equation}
     
 \section{Kinematik, Dynamik (Kraft)}
 
@@ -249,20 +250,20 @@ Für den Sektor muss jeweils addiert werden:
 
 \lbparagraph{Grundformeln}
 
-\begin{tabular}{l|l|l}
-    Variable & Formeln... & \\
+Hinweis: $v[\frac{km}{h}] = 3.6 \times v[\frac{m}{s}]$ \newline
+
+\begin{tabular}{l|l|l|l}
+    Variable & Formeln... & & \\
     \hline
-    $\overline{v}$ & $\frac{s}{t}$ & $\frac{v_0 + v}{2}$ \\
+    $\overline{v}$ & $\frac{s}{t}$ & $\frac{v_0 + v}{2}$ & \\
     \hline
-    s & $\overline{v} \times t$ & $\frac{v_0 + v}{2} \times t$  \\
+    s & $\overline{v} \times t$ & $\frac{v_0 + v}{2} \times t$ & $s_0 + v_0 \times t + \frac{1}{2}a \times t^2$ \\
     \hline
-    a & $\frac{v - v_0}{t}$ & \\
+    a & $\frac{v - v_0}{t}$ & & \\
     \hline
-    s & $s_0 + v_0 \times t + \frac{1}{2}a \times t^2$ & \\
+    $v^2$ & $v_0^2 + 2as$ & & \\
     \hline
-    $v^2$ & $v_0^2 + 2as$ & \\
-    \hline
-    v & $v_0 + at$ &
+    v & $v_0 + at$ & &
 \end{tabular}
 
 \lbparagraph{Varianten}
@@ -270,7 +271,7 @@ Für den Sektor muss jeweils addiert werden:
 \begin{tabular}{l|l|l}
     Variable & Formeln... & \\
     \hline
-    [???]
+    [???] & &
 \end{tabular}
 
 \lbsubsection{Drehung}
@@ -322,10 +323,12 @@ Für den Sektor muss jeweils addiert werden:
     F_G = \frac{G \times m_1 \times m_2}{r^2}
 \end{equation}
 
+[???] Gesetze 1, 2, 3
+
 \lbsubsection{Bremsweg}
 
 \begin{equation}
-    s_b = \frac{V_0^2}{2g\mu}
+    s_b = \frac{V_0^2}{2g\mu} = \frac{v^2 - v_0^2}{-2ab}
 \end{equation}
 
 \section{Arbeit, Energie, Leistung}
@@ -353,22 +356,36 @@ Für den Sektor muss jeweils addiert werden:
 
 \lbparagraph{Kinetische Energie}
 
-\[E_{kin} = \frac{1}{2}mv^2\]
+\begin{equation}
+    E_{kin} = \frac{1}{2}mv^2
+\end{equation}
 
 \lbparagraph{Potentielle Energie}
 
-\[E_{pot} = mgh\]
+\begin{equation}
+    E_{pot} = mgh
+\end{equation}
 
 \lbparagraph{Federenergie \ Deformationsenergie}
 
 D: Federkonstante $[\frac{N}{cm}]$
 
-\[E_D = \frac{1}{2}Ds^2\]
+\begin{equation}
+    E_D = \frac{1}{2}Ds^2
+\end{equation}
 
 \lbparagraph{Reibungsenergie}
 
-Horizontale: \[E_R = F_R \times s = \mu \times mg \times s\]
+Horizontale:
 
-Schiefe Ebene: \[E_R = F_R \times s = \mu \times mg \times \cos{\alpha} \times s\]
+\begin{equation}
+    E_R = F_R \times s = \mu \times mg \times s
+\end{equation}
+
+Schiefe Ebene:
+
+\begin{equation}
+    E_R = F_R \times s = \mu \times mg \times \cos{\alpha} \times s
+\end{equation}
 
 \end{document}
