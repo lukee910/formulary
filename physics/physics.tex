@@ -6,8 +6,6 @@
 \graphicspath{ {../images/} }
 
 \newcommand{\lbparagraph}[1]{\paragraph{#1}\mbox{}\\}
-\newcommand{\lbsubsection}[1]{\subsection{#1}}
-\newcommand{\lbhiddensubsection}[1]{\subsection*{#1}}
 
 \newcommand{\eqsp}[1]{\quad\#\quad}
 
@@ -25,7 +23,7 @@
 
 \section*{Intro: Geometrie}
 
-\lbhiddensubsection{Trigonometrie}
+\subsection*{Trigonometrie}
 
 \lbparagraph{Generell}
 
@@ -89,7 +87,7 @@ Wenn h $\parallel$ k. $\alpha$ und $\alpha$' sind Stufenwinkel, $\gamma$ und $\g
 
 \section{Kräftegelichgewicht, statisches Gleichgewicht}
 
-\lbsubsection{Koordinaten}
+\subsection{Koordinaten}
 
 \begin{tabular}{l l}
     Polarform & $(Betrag[F]|Winkel[\alpha])$ \\
@@ -133,7 +131,7 @@ Für den Sektor muss jeweils addiert werden:
   $F_{res}$ & $F_{res}x$ & $F_{res}y$ \\
 \end{tabular}
 
-\lbsubsection{Kräfte}
+\subsection{Kräfte}
 
 \begin{tabular}{l|l}
     I & Alle Kräfte heben sich auf \\
@@ -148,7 +146,13 @@ Für den Sektor muss jeweils addiert werden:
     [N] = [kg] \times [\frac{m}{s^2}] = [\frac{kg \times m}{s^2}]
 \end{equation}
 
-\lbparagraph{Schwerkraft}
+\lbparagraph{Gravitationskraft}
+
+\begin{equation}
+    F_{grav} = \frac{G \times m_1 \times m_2}{r^2}
+\end{equation}
+
+\lbparagraph{Gewichtskraft}
 
 \begin{equation}
     g = g_{Erde} = 9.81\frac{m}{s^2}
@@ -194,7 +198,7 @@ Für den Sektor muss jeweils addiert werden:
     F = T - F_R \text{ (Bei Masse auf Schiefer Ebene)}
 \end{gather}
 
-\lbsubsection{Drehmoment}
+\subsection{Drehmoment}
 
 \lbparagraph{Generell}
 
@@ -211,7 +215,6 @@ Für den Sektor muss jeweils addiert werden:
 
 \lbparagraph{Statisch}
 
-
 \begin{equation}
     F_{1\perp} \times l_1 = F_{2\perp} \times l_2
 \end{equation}
@@ -222,11 +225,11 @@ Für den Sektor muss jeweils addiert werden:
     M_{Res} = M_{Uhrzeigersinn} - M_{Gegenuhrzeigersinn}
 \end{equation}
 
-\lbsubsection{Flaschenzug und Hebelgesetz}
+\subsection{Flaschenzug und Hebelgesetz}
 
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{flaschenzug-berechnen}
 
-\lbsubsection{Hooksches Gesetz}
+\subsection{Hooksches Gesetz}
 
 \lbparagraph{Parallel}
 
@@ -250,9 +253,7 @@ Diese Formeln basieren auf der Annahme, dass parallele Federn sich um dieselbe D
     
 \section{Kinematik, Dynamik (Kraft)}
 
-\lbsubsection{Kinematik}
-
-\lbparagraph{Grundformeln}
+\subsection{Kinematik}
 
 Hinweis: $v[\frac{km}{h}] = 3.6 \times v[\frac{m}{s}]$ \newline
 
@@ -270,15 +271,7 @@ Hinweis: $v[\frac{km}{h}] = 3.6 \times v[\frac{m}{s}]$ \newline
     v & $v_0 + at$ & &
 \end{tabular}
 
-\lbparagraph{Varianten}
-
-\begin{tabular}{l|l|l}
-    Variable & Formeln... & \\
-    \hline
-    [???] & &
-\end{tabular}
-
-\lbsubsection{Drehung}
+\subsection{Drehung}
 
 \lbparagraph{Variablendefinitionen}
 
@@ -317,19 +310,25 @@ Hinweis: $v[\frac{km}{h}] = 3.6 \times v[\frac{m}{s}]$ \newline
     $F_z$ & $a_z \times m$ & &
 \end{tabular}
 
-\lbparagraph{Weitere Umformungen}
+\subsection{Keplresche Gesetze}
 
-[???]
+\paragraph{I}
 
-\lbsubsection{Keplresche Gesetze}
+Die Planeten beschreiben ellipsenförmige Bahnen, in deren einem Brennpunkt die Sonne steht.
+
+\paragraph{II}
+
+Der Radiusvektor $\vec{r}$ überstreicht in gleichen Zeiten gleiche Flächen. $\rightarrow \vec{L} = m \times \vec{r} \times \vec{v} = konstant$
+
+\paragraph{III}
+
+Die Quadrate der Umlaufszeiten zweier Planeten verhalten sich wie die Kuben der grossen Ellipsenhalbachsen:
 
 \begin{equation}
-    F_G = \frac{G \times m_1 \times m_2}{r^2}
+    \frac{T_1^2}{a_1^3} = \frac{T_2^2}{a_2^3}
 \end{equation}
 
-[???] Gesetze 1, 2, 3
-
-\lbsubsection{Bremsweg}
+\subsection{Bremsweg}
 
 \begin{equation}
     s_b = \frac{V_0^2}{2g\mu} = \frac{v^2 - v_0^2}{-2ab}
@@ -337,7 +336,7 @@ Hinweis: $v[\frac{km}{h}] = 3.6 \times v[\frac{m}{s}]$ \newline
 
 \section{Arbeit, Energie, Leistung}
 
-\lbsubsection{Energieerhaltungssatz}
+\subsection{Energieerhaltungssatz}
 
 \lbparagraph{Variablendefinitionen}
 
@@ -390,6 +389,115 @@ Schiefe Ebene:
 
 \begin{equation}
     E_R = F_R \times s = \mu \times mg \times \cos{\alpha} \times s
+\end{equation}
+
+\section{Wärme}
+
+\subsection{Im Allgemeinen}
+
+\lbparagraph{Variablendefinitionen}
+
+\begin{tabular}{l|l|r|r}
+    Variable & Beschreibung & Einheit & Weitere Einheiten \\
+    \hline
+    U & Innere Energie & [J] & \\
+    Q & Wärme & [J] & \\
+    c & spezifische Wärmekapazität & $[\frac{J}{kg \times K}]$ & \\
+    $L_f$ & spezifische Schmelz-/Erstarrungswärme & $[\frac{J}{kg}]$ & \\
+    $L_v$ & spezifische Verdampfungs-/Kondensationswärme & $[\frac{J}{kg}]$ & \\
+    p & Druck & [Pa] & $[Bar] =10^5 [Pa], [\frac{N}{m^2}]$ \\
+    $\vartheta$ & Temperatur in Celsius & $[{\degree}C]$ & \\
+    T & Temperatur in Kelvin & [K] &
+\end{tabular}
+
+\lbparagraph{STP (Standard Temperature Pressure)}
+
+\begin{equation}
+    p_0 = 1.0133
+    \eqsp{}
+    T_0 = 0{\degree}C = 273.15K 
+\end{equation}
+
+\subsection{Änderung Wärme anhand der Temperatur}
+
+\lbparagraph{Wärmemenge}
+
+\begin{equation}
+    {\Delta}Q = m \times c \times {\Delta}T
+\end{equation}
+
+\lbparagraph{Schmelzwärme}
+
+\begin{equation}
+    Q_f = L_f \times m
+\end{equation}
+
+\lbparagraph{Verdampfungswärme}
+
+\begin{equation}
+    Q_v = L_v \times m
+\end{equation}
+
+[???] TODO: Diagramm
+
+\lbparagraph{Wärmeausgleich}
+
+$x_a$ steht für den jeweiligen Aggregatszustand. Um die korrekte Mischtemparatur zu bekommen muss $T_1 < T_2$ sein. Achtung: Man muss Massenänderungen durch Verdampfung einrechnen.
+
+\begin{equation}
+    Q_M = Q_1 + {\Delta}Q_1 + Q_{v1} + Q_{f1} = Q_2 + {\Delta}Q_2 + Q_{v2} + Q_{f2}    
+\end{equation}
+
+\begin{equation}
+\begin{tabular}{ll}
+    & $c_1 \times m_1 \times (T_M - T_1) + L_{v1} \times m_{v1} + L_{f1} \times m_{f1}$ \\
+    = & $c_2 \times m_2 \times (T_2 - T_M) + L_{v2} \times m_{v2} + L_{f2} \times m_{f2}$
+\end{tabular}
+\end{equation}
+
+\subsection{Ausdehnung}
+
+\lbparagraph{Bei Gas (Zustandsgleichung ideales Gas)}
+
+Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$ verwenden.
+
+\begin{equation}
+    \frac{p_1 \times V_1}{T_0} = \frac{p_2 \times V_2}{T_2}
+\end{equation}
+
+\lbparagraph{Ausdehnung bei festen oder flüssigen Stoffen}
+
+\begin{equation*}
+    \alpha, \beta, \gamma = [\frac{1}{K}]
+\end{equation*}
+
+\begin{gather}
+    {\Delta}l = l_1 - l_0 = \alpha \times l_0 \times {\Delta}T \\
+    {\Delta}A = A_1 - A_0 = \beta \times A_0 \times {\Delta}T
+    \eqsp{}
+    \beta \approx 2 \times \alpha \\
+    {\Delta}V = V_1 - V_0 = \gamma \times V_0 \times {\Delta}T
+    \eqsp{}
+    \gamma \approx 3 \times \alpha
+\end{gather}
+
+\subsection{Wärmeleitfähigkeit}
+
+\lbparagraph{Variablendefinitionen}
+
+\begin{tabular}{l|l|r|r}
+    Variable & Beschreibung & Einheit & Weitere Einheiten \\
+    \hline
+    $P_{Th}$ & Thermische Leistung & [W] & $[\frac{J}{s}]$ \\
+    k & Wärmeleitfähigkeit & $\frac{W}{m \times K}$ & \\
+    A & Querschnittfläche Leiter & $m^2$ & \\
+    l & Länge Leiter & m &
+\end{tabular}
+
+\lbparagraph{Satz}
+
+\begin{equation}
+    P_{Th} = k \times A \times \frac{\vartheta - {\vartheta}_0}{l}
 \end{equation}
 
 \end{document}
