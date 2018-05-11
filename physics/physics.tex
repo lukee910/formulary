@@ -503,4 +503,45 @@ Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$
     P_{Th} = k \times A \times \frac{\vartheta - {\vartheta}_0}{l}
 \end{equation}
 
+\section{Hydrostatik, Druck, Dichte}
+
+\subsection{Im Allgemeinen}
+
+\lbparagraph{Variablendefinitionen}
+
+\begin{tabular}{l|l|r|r}
+    Variable & Beschreibung & Einheit & Weitere Einheiten \\
+    \hline
+    $\rho$ & Dichte & $[\frac{kg}{m^3}]$ & \\
+    p & Druck & [Pa] & $[Bar] =10^5 [Pa], [\frac{N}{m^2}]$ \\
+    ${\rho}_{Fl}$ & Dichte Flüssigkeit & $[\frac{kg}{m^3}]$ & \\
+    ${\rho}_K$ & Dichte Körper & $[\frac{kg}{m^3}]$ & \\
+    $V_E$ & Eingetauchtes Volumen & $m^3$ & \\
+    $V_K$ & Volumen Körper & $m^3$ &
+\end{tabular}
+
+\subsection{Hydrostatischer Druck}
+
+\lbparagraph{Hydrostatischer Druck}
+
+\begin{equation}
+    p = {\rho}_{Fl} \times g \times h
+\end{equation}
+
+\lbparagraph{Auftriebskraft}
+
+\begin{equation}
+    F_A = {\rho}_{Fl} \times g \times V_E
+\end{equation}
+
+\lbparagraph{Statisch schwimmender Körper}
+
+\begin{equation}
+    F_A = F_G
+    \eqsp{}
+    {\rho}_{Fl} \times g \times V_E = {\rho}_K \times V_K \times g
+    \eqsp{}
+    V_E = \frac{{\rho}_K \times V_K}{{\rho}_{Fl}}
+\end{equation}
+
 \end{document}
