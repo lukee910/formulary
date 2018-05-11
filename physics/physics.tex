@@ -318,7 +318,7 @@ Die Planeten beschreiben ellipsenförmige Bahnen, in deren einem Brennpunkt die 
 
 \paragraph{II}
 
-Der Radiusvektor $\vec{r}$ überstreicht in gleichen Zeiten gleiche Flächen. $\rightarrow \vec{L} = m \times \vec{r} \times \vec{v} = konstant$
+Der Radiusvektor $\vec{r}$ überstreicht in gleichen Zeiten gleiche Flächen. $\Rightarrow \vec{L} = m \times \vec{r} \times \vec{v} = konstant$
 
 \paragraph{III}
 
@@ -542,6 +542,86 @@ Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$
     {\rho}_{Fl} \times g \times V_E = {\rho}_K \times V_K \times g
     \eqsp{}
     V_E = \frac{{\rho}_K \times V_K}{{\rho}_{Fl}}
+\end{equation}
+
+\section{Elektrizität}
+
+\subsection{Im Allgemeinen}
+
+\lbparagraph{Variablendefinitionen}
+
+\begin{tabular}{l|l|r|r}
+    Variable & Beschreibung & Einheit & Weitere Einheiten \\
+    \hline
+    U & Spannung & [V] & \\
+    R & Widerstand & $[\Omega]$ & \\
+    I & Stromstärke & [A] & \\
+    G & Leitwert & [S] & $[\frac{1}{\Omega}]$ \\
+    P & Leistung & [W] & $[\frac{J}{s}]$ \\
+    W & Arbeit & [J] & [Ws] \\
+    Q & Ladung & [C] & \\
+    $\rho$ & Spezifischer Widerstand & $[\frac{{\Omega}mm^2}{m}]$ & $[{\Omega}m]$
+\end{tabular}
+
+\lbparagraph{Ohm'sches Gesetz}
+
+\begin{equation}
+    U = R \times I
+    \eqsp{}
+    R = \frac{U}{I}
+    \eqsp{}
+    I = \frac{U}{R}
+\end{equation}
+
+\lbparagraph{Leistung und Arbeit}
+
+\begin{equation}
+    P = U \times I = R \times I^2 = \frac{U^2}{R}
+    \eqsp{}
+    W = U \times I \times t
+\end{equation}
+
+\begin{equation}
+    1kWh = 3.6 \times 10^6J
+    \eqsp{}
+    1J = \frac{1kWh}{3.6 \times 10^6}
+\end{equation}
+
+\subsection{Schaltungen}
+
+\lbparagraph{Seriell}
+
+\begin{equation}
+    R_{tot} = R_1 + ... + R_n
+    \eqsp{}
+    I = konstant
+    \eqsp{}
+    U = U_1 + ... + U_n
+\end{equation}
+
+\lbparagraph{Parallel}
+
+\begin{equation}
+    R_{tot} = (\frac{1}{R_1} + ... + \frac{1}{R_n})^{-1} = \frac{R_1 \times ... \times R_n}{R_1 + ... + R_n}
+    \eqsp{}
+    I = I_1 + ... + I_n
+    \eqsp{}
+    U = konstant
+\end{equation}
+
+Beispiel zum errechnen von $I_1$ wenn $R_1$, $R_2$, $U$ und $I$ gegeben sind.
+
+\begin{gather}
+    U_1 = U_2 = U \\
+    R_1 \times I_1 = R_2 \times (I - I_1) \\
+    I_1 = \frac{R_2 \times I}{R_1 + R_2}
+\end{gather}
+
+\subsection{Spezifischer Widerstand}
+Die Einheit von $\rho$ muss zu der Einheit von $A$ passen: $\rho[\frac{{\Omega}mm^2}{m}] \Rightarrow A[mm^2]$, $\rho[{\Omega}m] \Rightarrow A[m^2]$.
+
+\begin{equation}
+    R = \frac{\rho \times l}{A}
 \end{equation}
 
 \end{document}
