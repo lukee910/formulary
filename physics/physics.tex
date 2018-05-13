@@ -7,11 +7,11 @@
 
 \newcommand{\lbparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
-\newcommand{\eqsp}[1]{\quad\#\quad}
+\newcommand{\eqsp}[1]{\quad\textbf{;}\quad}
 
 \title{Formelsammlung Physik BMT 14a}
 \author{Lukas Dörig, Michelle Meyer, Yan Poblete}
-\date{\today\\v1.1}
+\date{\today\\v1.2}
 
 \begin{document}
 
@@ -484,6 +484,14 @@ Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$
     V_1 = V_0(1 + \gamma \times {\Delta}T)
 \end{gather}
 
+\lbparagraph{Massstab}
+
+Eine Messung ist ein Vergleich einer Länge $l$ mit einer Einheit $e$. Wenn nun sowohl das gemessene Material und der Massstab sich ausdehnen muss für beide die Ausdehnung einberechnet werden, um die Originale Masseinheit zu erhalten.
+
+\begin{equation}
+    \frac{l[m]}{1[m]} = \frac{l'}{e'} = \frac{l(1 + {\alpha}_l \times {\Delta}T)}{e(1 + {\alpha}_e \times {\Delta}T)}
+\end{equation}
+
 \subsection{Wärmeleitfähigkeit}
 
 \lbparagraph{Variablendefinitionen}
@@ -492,9 +500,9 @@ Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$
     Variable & Beschreibung & Einheit & Weitere Einheiten \\
     \hline
     $P_{Th}$ & Thermische Leistung & [W] & $[\frac{J}{s}]$ \\
-    k & Wärmeleitfähigkeit & $\frac{W}{m \times K}$ & \\
-    A & Querschnittfläche Leiter & $m^2$ & \\
-    l & Länge Leiter & m &
+    k & Wärmeleitfähigkeitf & $[\frac{W}{m \times K}]$ & \\
+    A & Querschnittfläche Leiter & $[m^2]$ & \\
+    l & Länge Leiter & [m] &
 \end{tabular}
 
 \lbparagraph{Satz}
@@ -516,8 +524,8 @@ Achtung: Nur auf Gase anwenden. Bei Verwendung von STP $p_0...$ anstatt $p_2...$
     p & Druck & [Pa] & $[Bar] =10^5 [Pa], [\frac{N}{m^2}]$ \\
     ${\rho}_{Fl}$ & Dichte Flüssigkeit & $[\frac{kg}{m^3}]$ & \\
     ${\rho}_K$ & Dichte Körper & $[\frac{kg}{m^3}]$ & \\
-    $V_E$ & Eingetauchtes Volumen & $m^3$ & \\
-    $V_K$ & Volumen Körper & $m^3$ &
+    $V_E$ & Eingetauchtes Volumen & $[m^3]$ & \\
+    $V_K$ & Volumen Körper & $[m^3]$ &
 \end{tabular}
 
 \subsection{Hydrostatischer Druck}
@@ -560,6 +568,28 @@ Die Richtung von $F_{Res}$ ist nach unten. Negative Werte bedeuten eine Beschleu
     a = \frac{g({\rho}_K - {\rho}_{Fl})}{{\rho}_K}
 \end{gather}
 
+\subsection{Zugspannung}
+
+\lbparagraph{Variablendefinitionen}
+
+\begin{tabular}{l|l|r|r}
+    Variable & Beschreibung & Einheit & Weitere Einheiten \\
+    \hline
+    ${\sigma}_Z$ & Zugspannung & $[\frac{N}{m^2}]$ & \\
+    ${\sigma}_{Zul}$ & Zulässige Zugspannung & $[\frac{N}{m^2}]$ & \\
+    $R_M$ & Zugfestigkeit & $[\frac{N}{m^2}]$ & \\
+    S & Sicherheit & Zahl & \\
+    $F_{Max}$ & Maximale Zugkraft & [N] &
+\end{tabular}
+
+\lbparagraph{Satz}
+
+\begin{gather}
+    {\sigma}_Z = \frac{F}{A} \\
+    {\sigma}_{Zul} = \frac{R_M}{S} \\
+    F_{Max} = {\sigma}_{Zul} \times A
+\end{gather}
+
 \section{Elektrizität}
 
 \subsection{Im Allgemeinen}
@@ -576,7 +606,9 @@ Die Richtung von $F_{Res}$ ist nach unten. Negative Werte bedeuten eine Beschleu
     P & Leistung & [W] & $[\frac{J}{s}]$ \\
     W & Arbeit & [J] & [Ws] \\
     Q & Ladung & [C] & \\
-    $\rho$ & Spezifischer Widerstand & $[\frac{{\Omega}mm^2}{m}]$ & $[{\Omega}m]$
+    $\rho$ & Spezifischer Widerstand & $[\frac{{\Omega}mm^2}{m}]$ & $[{\Omega}m]$ \\
+    $\kappa$ & Spezifischer Leitwert & $[\frac{mm^2}{{\Omega}m}]$ & \\
+    $\alpha$ & Temperaturbeiwert & $[\frac{1}{K}]$ &
 \end{tabular}
 
 \lbparagraph{Ohm'sches Gesetz}
@@ -638,6 +670,18 @@ Die Einheit von $\rho$ muss zu der Einheit von $A$ passen: $\rho[\frac{{\Omega}m
 
 \begin{equation}
     R = \frac{\rho \times l}{A}
+\end{equation}
+
+\subsection{Spezifischer Leitwert}
+
+\begin{equation}
+    R = \frac{l}{\kappa \times A}
+\end{equation}
+
+\subsection{Widerstandsänderung bei Temperatur}
+
+\begin{equation}
+    R = R \times \alpha \times {\Delta}T
 \end{equation}
 
 \end{document}
